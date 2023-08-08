@@ -1,6 +1,6 @@
-# chip8rsbook
+# **エミュレータ開発体験記〜1970年代のシンプルな仮想マシンCHIP-8をRustで実装してみた〜** 
 こちらはコミックマーケット102 で販売した「 **エミュレータ開発体験記〜1970年代のシンプルな仮想マシンCHIP-8をRustで実装してみた〜** 」のサンプルコード置き場です。  
-![表紙](./image/cover.png){width=40%}
+![表紙](./image/cover.png)
 
 CHIP-8の[Rust](https://www.rust-lang.org/)実装です。
 
