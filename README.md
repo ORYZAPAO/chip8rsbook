@@ -11,7 +11,7 @@
 
 
 
-# ★[2] CHIP-8の実装サンプル
+# ★[2] 実装サンプル実行時の注意
 ### SDL2(Simple DirectMedia Layer)が必要です
 サンプルコードの実行には、[SDL2](https://www.libsdl.org/)のインストールが必要です。
 #### (1) Windowsの場合
