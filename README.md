@@ -1,16 +1,41 @@
-# **エミュレータ開発体験記〜1970年代のシンプルな仮想マシンCHIP-8をRustで実装してみた〜** 
-こちらはコミックマーケット102 で販売した「 **エミュレータ開発体験記〜1970年代のシンプルな仮想マシンCHIP-8をRustで実装してみた〜** 」のサンプルコード置き場です。  
+# [Support] エミュレータ開発体験記〜1970年代のシンプルな仮想マシンCHIP-8をRustで実装してみた〜 
 ![表紙](./image/cover.png)
+こちらはコミックマーケット102（2023年夏） で「ぱおぞう工房」で販売した、CHIP-8の[Rust](https://www.rust-lang.org/)実装の同人誌 **エミュレータ開発体験記** のサポートページです。  
 
-CHIP-8の[Rust](https://www.rust-lang.org/)実装です。
 
 # CHIP-8とは
 **CHIP-8** は、今から数十年前の1970年代の初期のマイクロコンピュータ研究者であったJoseph Weisbecker氏が1802というマイコン向けに開発したもので、COSMAC VIPとTelmac 1800といった8bitコンピュータで使用されたものだそうです。実際にCHIP-8というコンピュータがあった訳ではなく、あくまでも一連のCHIP-8命令を実行するソフトウェアで一種のインタプリタ、簡単な命令シュミレータ、仮装マシン・・・です。
 
 レトロ風味溢れるデモやゲームが公開されています。  
 
-# サンプルコード
-## [chip8rs001](./chip8rs001/)
+
+
+# CHIP-8の実装サンプル
+
+## SDL2(Simple DirectMedia Layer)が必要です
+サンプルコードの実行には、[SDL2](https://www.libsdl.org/)のインストールが必要です。
+### Windowsの場合
+Windows の場合は[SDL2の公式ウェブサイト](https://www.libsdl.org/)に登録されている、SDL2のダイナミックリンクライブラリの下記2ファイルが必要です。
++ **SDL2.dll** 
++ **SDL2.lib**
+
+「Download」の「SDL Release」をクリックして、「SDL2-develop-<バージョン>-VC.zip」をダウンロードして展開し、下記ファイルを cargo コマンドの実行ディレクトリに置いてから行って下さい。
+## MacOSの場合
+MacOSの場合は、[Homebrew](https://brew.sh/index_ja)のbrewコマンド等でSDL2をインストールして下さい。
+```bash
+> brew install sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_sound sdl2_ttf
+```
+
+## Linux系、Rapsberry PIの場合
+Linuxの場合は、各ディストリビューション付属のパッケージマネージャを使ってSDL2をインストールして下さい。  
+
+例えば[Ubuntu](https://jp.ubuntu.com/) や [Rapsberry PI](https://www.raspberrypi.com/) の場合、aptコマンドを下記のように実行すれば良いと思います。
+```bash 
+> sudo apt -y install libsdl2-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev   libfreetype6 libfreetype6-dev
+```
+
+
+## [chip8rs001](./sample/chip8rs001/)
 CHIP-8の64x32グラフィックの仮実装したものです。   
 斜め線を表示します。  
 
@@ -25,7 +50,7 @@ gitコマンドで clone して、Rustのcargoコマンドで実行して下さ�
 > cargo r danm8ku.ch8
 ```
 
-## [chip8rs002](./chip8rs002/)
+## [chip8rs002](./sample/chip8rs002/)
 CHIP-8命令を実装しています（サウンドは実装していません）
 
 実行時には、下記のようにCHIP-8のROMイメージファイル名を指定して下さい。  
