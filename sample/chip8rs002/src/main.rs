@@ -635,8 +635,8 @@ fn main() -> Result<(), String> {
         canvas.present();
 
         // 2ms 待つ
-        //::std::thread::sleep(::std::time::Duration::from_millis(WAIT_MS as u64));
-        ::std::thread::sleep(::std::time::Duration::from_micros(500_u64));
+        ::std::thread::sleep(::std::time::Duration::from_millis(WAIT_MS as u64));
+        //::std::thread::sleep(::std::time::Duration::from_micros(1000_u64));
 
         // 各タイマーレジスタをカウントダウン
         time_ct -= WAIT_MS;
