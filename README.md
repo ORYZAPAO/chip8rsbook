@@ -23,7 +23,7 @@ Windows の場合は[SDL2の公式ウェブサイト](https://www.libsdl.org/)�
 #### (2) MacOSの場合
 MacOSの場合は、[Homebrew](https://brew.sh/index_ja)のbrewコマンド等でSDL2をインストールして下さい。
 ```bash
-> brew install sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_sound sdl2_ttf
+ brew install sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_sound sdl2_ttf
 ```
 
 #### (3) Linux系、Rapsberry PIの場合
@@ -31,7 +31,7 @@ Linuxの場合は、各ディストリビューション付属のパッケージ
 
 例えば[Ubuntu](https://jp.ubuntu.com/) や [Rapsberry PI](https://www.raspberrypi.com/) の場合、aptコマンドを下記のように実行すれば良いと思います。
 ```bash 
-> sudo apt -y install libsdl2-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev   libfreetype6 libfreetype6-dev
+ sudo apt -y install libsdl2-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev   libfreetype6 libfreetype6-dev
 ```
 # ★[3] CHIP-8の実装サンプル
 ## [Exp.1) chip8rs001](./sample/chip8rs001/)
@@ -44,9 +44,9 @@ CHIP-8命令コード等は実装していません。
 #### 実行方法  
 gitコマンドで clone して、Rustのcargoコマンドで実行して下さい。
 ```
-> git clone https://github.com/ORYZAPAO/chip8rsbook.git
-> cd chip8rsbook/chip8rs001/
-> cargo r danm8ku.ch8
+git clone https://github.com/ORYZAPAO/chip8rsbook.git
+cd chip8rsbook/chip8rs001/
+cargo r
 ```
 
 ## [ Exp.2) chip8rs002](./sample/chip8rs002/)
@@ -57,10 +57,10 @@ CHIP-8命令を実装しています（サウンドは実装していません�
 
 #### 実行方法
 gitコマンドで clone して、Rustのcargoコマンドで実行して下さい。
-```
-> git clone https://github.com/ORYZAPAO/chip8rsbook.git
-> cd chip8rsbook/chip8rs001/
-> cargo r octojam1title.ch8 <-- CHIP-8のROMイメージファイル名
+```bash
+git clone https://github.com/ORYZAPAO/chip8rsbook.git
+cd chip8rsbook/chip8rs001/
+cargo r octojam1title.ch8 <-- CHIP-8のROMイメージファイル名
 ```
 
 # CHIP-8 ROMイメージファイルの入手先
