@@ -45,7 +45,7 @@ CHIP-8命令コード等は実装していません。
 gitコマンドで clone して、Rustのcargoコマンドで実行して下さい。
 ```
 git clone https://github.com/ORYZAPAO/chip8rsbook.git
-cd chip8rsbook/chip8rs001/
+cd chip8rsbook/sample/chip8rs001
 cargo r
 ```
 
@@ -59,7 +59,7 @@ CHIP-8命令を実装しています（サウンドは実装していません�
 gitコマンドで clone して、Rustのcargoコマンドで実行して下さい。
 ```bash
 git clone https://github.com/ORYZAPAO/chip8rsbook.git
-cd chip8rsbook/chip8rs001/
+cd cd chip8rsbook/sample/chip8rs002
 cargo r octojam1title.ch8 <-- CHIP-8のROMイメージファイル名
 ```
 
@@ -68,7 +68,6 @@ cargo r octojam1title.ch8 <-- CHIP-8のROMイメージファイル名
 
 + [CHIP-8 Archive](https://johnearnest.github.io/chip8Archive/)
 + [Welcome to David Winter's CHIP-8 emulation page !](http://pong-story.com/chip8/)
-
 + [Chip-8 Games Pack](https://www.zophar.net/pdroms/chip8/chip-8-games-pack.html)
 
 # ★[4] 誤記訂正
