@@ -36,6 +36,7 @@ Linuxの場合は、各ディストリビューション付属のパッケージ
 # ★[3] CHIP-8の実装サンプル
 ## [Exp.1) chip8rs001](./sample/chip8rs001/)
 ![](./image/graphic_test.png)
+
 CHIP-8の64x32グラフィックの仮実装したものです。   
 斜め線を表示します。  
 
@@ -51,6 +52,7 @@ cargo r
 
 ## [ Exp.2) chip8rs002](./sample/chip8rs002/)
 ![](./image/octo-ber.png)
+
 CHIP-8命令を実装しています（サウンドは実装していません）
 
 実行時には、下記のようにCHIP-8のROMイメージファイル名を指定して下さい。  
