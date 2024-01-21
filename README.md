@@ -3,6 +3,9 @@
 
 こちらはコミックマーケット102（2023年夏） で「ぱおぞう工房」で販売した、CHIP-8の[Rust](https://www.rust-lang.org/)実装の同人誌 **エミュレータ開発体験記** のサポートページです。  
 
+変更履歴  
++ 2024/01/21 Appleシリコン搭載MacでRustビルドする際の注意事項を追加
++ 2023/08/15 初版
 
 # ★[1] CHIP-8とは
 **CHIP-8** は、今から数十年前の1970年代の初期のマイクロコンピュータ研究者であったJoseph Weisbecker氏が1802というマイコン向けに開発したもので、COSMAC VIPとTelmac 1800といった8bitコンピュータで使用されたものだそうです。実際にCHIP-8というコンピュータがあった訳ではなく、あくまでも一連のCHIP-8命令を実行するソフトウェアで一種のインタプリタ、簡単な命令シュミレータ、仮装マシン・・・です。
@@ -24,6 +27,14 @@ Windows の場合は[SDL2の公式ウェブサイト](https://www.libsdl.org/)�
 MacOSの場合は、[Homebrew](https://brew.sh/index_ja)のbrewコマンド等でSDL2をインストールして下さい。
 ```bash
  brew install sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_sound sdl2_ttf
+```
+
++ (※)Appleシリコン搭載（M1、M2、M3など)のMacの場合.  
+従来のIntel CPU搭載Macでは上記brewコマンド実行だけでビルド実行できましたが、
+Appleシリコン搭載Macでは下記の環境変数設定が必要な様です。
+```bash
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"　　## for Rust SDL2
+export PATH="/opt/homebrew/opt/expat/bin:$PATH"
 ```
 
 #### (3) Linux系、Rapsberry PIの場合
