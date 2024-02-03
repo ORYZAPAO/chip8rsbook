@@ -7,14 +7,14 @@
 + 2024/01/21 Appleシリコン搭載MacでRustビルドする際の注意事項を追加
 + 2023/08/15 初版
 
-# ★[1] CHIP-8とは
+## ★[1] CHIP-8とは
 **CHIP-8** は、今から数十年前の1970年代の初期のマイクロコンピュータ研究者であったJoseph Weisbecker氏が1802というマイコン向けに開発したもので、COSMAC VIPとTelmac 1800といった8bitコンピュータで使用されたものだそうです。実際にCHIP-8というコンピュータがあった訳ではなく、あくまでも一連のCHIP-8命令を実行するソフトウェアで一種のインタプリタ、簡単な命令シュミレータ、仮装マシン・・・です。
 
 レトロ風味溢れるデモやゲームが公開されています。  
 
 
 
-# ★[2] 実装サンプル実行時の注意
+## ★[2] 実装サンプル実行時の注意
 ### SDL2(Simple DirectMedia Layer)が必要です
 サンプルコードの実行には、[SDL2](https://www.libsdl.org/)のインストールが必要です。
 #### (1) Windowsの場合
@@ -44,8 +44,8 @@ Linuxの場合は、各ディストリビューション付属のパッケージ
 ```bash 
  sudo apt -y install libsdl2-dev libsdl2-gfx-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev   libfreetype6 libfreetype6-dev
 ```
-# ★[3] CHIP-8の実装サンプル
-## [Exp.1) chip8rs001](./sample/chip8rs001/)
+## ★[3] CHIP-8の実装サンプル
+### [Exp.1) chip8rs001](./sample/chip8rs001/)
 ![](./image/graphic_test.png)
 
 CHIP-8の64x32グラフィックの仮実装したものです。   
@@ -61,7 +61,7 @@ cd chip8rsbook/sample/chip8rs001
 cargo r
 ```
 
-## [ Exp.2) chip8rs002](./sample/chip8rs002/)
+### [ Exp.2) chip8rs002](./sample/chip8rs002/)
 ![](./image/octo-ber.png)
 
 CHIP-8命令を実装しています（サウンドは実装していません）
@@ -76,16 +76,16 @@ cd cd chip8rsbook/sample/chip8rs002
 cargo r octojam1title.ch8 <-- CHIP-8のROMイメージファイル名
 ```
 
-# CHIP-8 ROMイメージファイルの入手先
+## CHIP-8 ROMイメージファイルの入手先
 以下に入手先を示します。
 
 + [CHIP-8 Archive](https://johnearnest.github.io/chip8Archive/)
 + [Welcome to David Winter's CHIP-8 emulation page !](http://pong-story.com/chip8/)
 + [Chip-8 Games Pack](https://www.zophar.net/pdroms/chip8/chip-8-games-pack.html)
 
-# ★[4] 誤記訂正
-## 2023/8/13 初版
-### P88　「5.1.26 LD [I],Vx」の説明 
+## ★[4] 誤記訂正
+### 2023/8/13 初版
+#### P88　「5.1.26 LD [I],Vx」の説明 
 ```
 　誤：レジスタV0～VF 値をメインメモリへ退避させる。 
 　　　レジスタV0～VF 値を、I レジスタで示されるメモリアドレスから順次メインメモリ領域へ…  
@@ -94,7 +94,7 @@ cargo r octojam1title.ch8 <-- CHIP-8のROMイメージファイル名
 　　　レジスタV0～Vxまでの値を、I レジスタで示されるメモリアドレスから順次メインメモリ領域へ… 
 ```
 
-### P89「5.1.27 LD Vx,[I] 」の説明 
+#### P89「5.1.27 LD Vx,[I] 」の説明 
 ```
 　誤：メインメモリから、レジスタV0～VF 値を復帰させる。 
 　　　I レジスタで示されるメモリアドレスに書き込まれている値を、順次レジスタV0～VF へ書き込む。 
