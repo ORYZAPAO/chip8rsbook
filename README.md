@@ -30,10 +30,10 @@ MacOSの場合は、[Homebrew](https://brew.sh/index_ja)のbrewコマンド等�
 ```
 
 + (※)Appleシリコン搭載（M1、M2、M3など)のMacの場合.  
-従来のIntel CPU搭載Macでは上記brewコマンド実行だけでビルド実行できましたが、
+従来のIntel CPU搭載Macでは、上記brewコマンド実行だけでビルド実行できましたが、
 Appleシリコン搭載Macでは下記の環境変数設定が必要な様です。
 ```bash
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"　　## for Rust SDL2
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export PATH="/opt/homebrew/opt/expat/bin:$PATH"
 ```
 
